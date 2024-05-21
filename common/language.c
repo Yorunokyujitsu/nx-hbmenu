@@ -113,7 +113,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_JP("入出力エラー"),
         STR_PT("Erro de E/S"),
         STR_NL("I/O Fout"),
-        STR_KO("입출력 오류"),
+        STR_KO("입/출력 오류"),
         STR_RU("Ошибка ввода/вывода"),
         STR_ZH_HANS("读写出错"),
         STR_ZH_HANT("取存錯誤"),
@@ -139,6 +139,7 @@ const char* const g_strings[StrId_Max][17] =
     {
         STR_EN("Could not find executable: %s"),
         STR_FR("Impossible trouver l'exécutable : %s"),
+        STR_KO("실행 파일을 찾을 수 없습니다: %s"),
         STR_ZH_HANS("找不到可执行文件"),
         STR_RU("Не удалось найти исполняемый файл: %s"),
     },
@@ -153,7 +154,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_JP("アプリが見つかりませんでした"),
         STR_PT("Não foram encontradas aplicações"),
         STR_NL("Geen toepassingen gevonden"),
-        STR_KO("애플리케이션을 찾을 수 없습니다"),
+        STR_KO("홈브류를 찾을 수 없습니다"),
         STR_RU("Приложения не найдены"),
         STR_ZH_HANS("找不到可执行的自制程序"),
         STR_ZH_HANT("沒有可執行的自製程式"),
@@ -207,9 +208,9 @@ const char* const g_strings[StrId_Max][17] =
             "en de toepassingen bevat."
         ),
         STR_KO(
-            "SD 카드에서 애플리케이션을 찾을 수 없습니다.\n"
-            "SD 카드 최상위에 /switch 폴더가 있고\n"
-            "애플리케이션을 포함하는지 확인해 주십시오."
+            "SD 카드에서 홈브류를 찾을 수 없습니다.\n"
+            "sdmc:/switch 경로를 확인 또는\n"
+            "올바른 홈브류 파일인지 확인하세요.\n"
         ),
         STR_RU(
             "На SD-карте не удалось найти ни одного приложения.\n"
@@ -236,7 +237,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_FR("La dernière application a retourné une erreur:"),
         STR_IT("L'ultima applicazione ha restituito un errore:"),
         STR_JP("直前に実行したアプリでエラーが発生しました:"),
-        STR_KO("최근 애플리케이션에서 오류가 발생했습니다:"),
+        STR_KO("최근 실행한 홈브류에서 오류가 발생했습니다:"),
         STR_ZH_HANS("程序运行后出现错误:"),
         STR_ZH_HANT("程式執行後出現錯誤:"),
         STR_RU("Последнее приложение вернуло ошибку:"),
@@ -249,6 +250,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_FR("Erreur au lancement de l'application:"),
         STR_IT("Errore nell'avvio dell'applicazione:"),
         STR_ES("No se ha podido iniciar la aplicación:"),
+        STR_KO("홈브류 기동 실패:"),
         STR_ZH_HANS("运行程序时发生错误:"),
         STR_ZH_HANT("執行程式時發生錯誤:"),
         STR_RU("Не удалось запустить приложение:"),
@@ -328,7 +330,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_JP("戻る"),
         STR_PT("Regressar"),
         STR_NL("Terug"),
-        STR_KO("뒤로 가기"),
+        STR_KO("뒤로"),
         STR_RU("Назад"),
         STR_ZH_HANS("返回"),
         STR_ZH_HANT("返回"),
@@ -368,6 +370,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_ES("Agregar a favoritos"),
         STR_IT("Aggiungi ai preferiti"),
         STR_FR("Ajouter aux favoris"),
+        STR_KO("색인"),
         STR_ZH_HANS("收藏"),
         STR_RU("Добавить в избранное"),
     },
@@ -378,6 +381,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_ES("Borrar de favoritos"),
         STR_IT("Rimuovi dai preferiti"),
         STR_FR("Retirer des favoris"),
+        STR_KO("해제"),
         STR_ZH_HANS("取消收藏"),
         STR_RU("Удалить из избранного")
     },
@@ -417,6 +421,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_DE("Standard Theme"),
         STR_IT("Tema di default"),
         STR_ES("Tema por defecto"),
+        STR_KO("기본 테마"),
         STR_ZH_HANS("默认主题"),
         STR_ZH_HANT("預設主題"),
         STR_RU("Тема по умолчанию"),
@@ -862,7 +867,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_IT("Disconnesso, in attesa della connessione…"),
         STR_ES("Desconectado, esperando a la red..."),
         STR_JP("オフラインです。ネットワーク接続を待っています…"),
-        STR_KO("연결 끊김, 네트워크 기다리는 중…"),
+        STR_KO("연결 끊김, 네트워크 연결 대기중…"),
         STR_ZH_HANS("无法连接网络，等待网络连接…"),
         STR_ZH_HANT("目前已離線，等待網路連線…"),
         STR_RU("Оффлайн, ожидание сети…"),
@@ -903,7 +908,7 @@ const char* const g_strings[StrId_Max][17] =
             "IP Addr: %lu.%lu.%lu.%lu, Poort: %d"
         ),
         STR_KO(
-            "nxlink의 연결을 대기중…\n"
+            "nxlink 연결 대기중…\n"
             "IP 주소: %lu.%lu.%lu.%lu, 포트: %d"
         ),
         STR_RU(

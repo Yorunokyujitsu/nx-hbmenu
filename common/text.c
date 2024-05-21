@@ -3,14 +3,14 @@
 static u64 s_textLanguageCode = 0;
 
 #ifdef __SWITCH__
-static int s_textLang = SetLanguage_ENUS;
+static int s_textLang = SetLanguage_KO;
 #else
 static int s_textLang = 1;
 #endif
 
 Result textInit(void) {
     #ifdef __SWITCH__
-    SetLanguage Language=SetLanguage_ENUS;
+    SetLanguage Language=SetLanguage_KO;
 
     s_textLang = Language;
 
@@ -34,7 +34,7 @@ int textGetLang(void) {
 const char* textGetString(StrId id) {
     const char* str = g_strings[id][s_textLang];
     #ifdef __SWITCH__
-    if (!str) str = g_strings[id][SetLanguage_ENUS];
+    if (!str) str = g_strings[id][SetLanguage_KO];
     #else                              
     if (!str) str = g_strings[id][1];
     #endif

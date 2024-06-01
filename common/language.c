@@ -52,6 +52,7 @@ const char* const g_strings[StrId_Max][17] =
         STR_ES("● Modo Applet ●"),
         STR_FR("● Mode Applet ●"),
         STR_ZH_HANS("● 小程序模式 ●"),
+        STR_KO("● Applet Mode ●"),
         STR_RU("● Режим Applet ●"),
     },
 

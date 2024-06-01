@@ -5,7 +5,7 @@ static u64 s_textLanguageCode = 0;
 #ifdef __SWITCH__
 static int s_textLang = SetLanguage_KO;
 #else
-static int s_textLang = 1;
+static int s_textLang = 7;
 #endif
 
 Result textInit(void) {
@@ -21,7 +21,7 @@ Result textInit(void) {
     setExit();
     if (R_FAILED(rc)) return rc;
     #else
-    s_textLang = 1;
+    s_textLang = 7;
     #endif
 
     return 0;
@@ -36,7 +36,7 @@ const char* textGetString(StrId id) {
     #ifdef __SWITCH__
     if (!str) str = g_strings[id][SetLanguage_KO];
     #else                              
-    if (!str) str = g_strings[id][1];
+    if (!str) str = g_strings[id][7];
     #endif
     return str;
 }
